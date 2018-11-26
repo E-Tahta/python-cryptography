@@ -9,6 +9,7 @@ build:
       - apt-get update
       - apt-get install -t jessie-backports debhelper
       - apt-get install build-essential equivs devscripts
+      - apt-get dist-upgrade
       - mkdir -p build-area
       - cd build-area
       - dpkg-source -x /packages/$(basename $DRONE_REPO)/*.dsc build-$(basename $DRONE_REPO)
